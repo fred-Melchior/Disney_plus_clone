@@ -7,6 +7,7 @@
 @use 'devices';
 @use 'faq';
 @use 'footer';
+@use 'header';
 
 @font-face {
     font-family: Avenir;
@@ -36,6 +37,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: Avenir, sans-serif;
+    list-style: none;
 }
 
 body{
@@ -73,7 +75,9 @@ body{
 }
 
 .button{
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 100%;
     height: 60px;
     font-size: 18px;
@@ -81,9 +85,33 @@ body{
     background-color: #6421ff;
     text-transform: uppercase;
     border-radius: 4px;
-    margin-top: 2vw;
-    margin-bottom: 8px;
     cursor: pointer;
+    text-decoration: none;
+    padding: 8px 15px;
+    letter-spacing: 1px;
+    border: 1px solid variaveis.$corFundo;
+
+    &:hover{
+        background-color: lighten(#6421ff, 3%);
+    }
+
+    &--secondary{
+        background-color: #0063e5;
+
+        &:hover{
+            background-color: lighten(#0063e5, 3%);
+        }
+    }
+
+    &--dark{
+        background-color: rgba($color: variaveis.$corFundo, $alpha: .8);
+        border: 1px solid variaveis.$corTxtSecond;
+
+        &:hover{
+            background-color: variaveis.$corTxtSecond;
+            color: variaveis.$corFundo;
+        }
+    }
 }
 
 section{
