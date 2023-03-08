@@ -21,6 +21,9 @@
         display: flex;
         justify-content: space-between;
 
+            @media (max-width: 768px){
+                padding: 0 12px 0 20px;
+            }
     }
 
     &__logo{
@@ -28,6 +31,10 @@
         width: 100%;
         margin: 5px;
         transition: all .5s ease;
+
+        @media (max-width: 768px){
+            max-width: 64px;
+        }
     }
 
     &__link{
@@ -41,5 +48,12 @@
 
     .button{
         height: 50px;
+
+        @media (max-width: 768px){
+            font-size: 13px;
+            padding: 8px 11px;
+            height: 40px;
+            letter-spacing: 0;
+        }
     }
 }

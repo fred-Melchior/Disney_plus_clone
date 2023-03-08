@@ -11,6 +11,11 @@
         gap: 24px;
         margin-top: 24px;
 
+
+    @media (max-width: 768px){
+        grid-template-columns: 1fr 1fr;
+    }
+
         h4{
             margin-top: 20px;
             margin-bottom: 24px;
